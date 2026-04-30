@@ -20,3 +20,15 @@ void Pila::mostrar() const {
     for (int i = cantidad - 1; i >= 0; i--)
         printf("  | %d |\n", datos[i]);
 }
+
+bool Pila::estaVacia() const {
+    return cantidad == 0;
+}
+
+bool Pila::estaLlena() const {
+    return cantidad == 100;
+}
+
+int Pila::obtenerTamano() const {
+    return cantidad;
+}
