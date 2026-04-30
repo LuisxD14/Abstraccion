@@ -15,6 +15,9 @@ public:
     void agregar(Persona* p);
     void quitar();
     void mostrar() const;
+    bool estaVacia() const;
+    bool estaLlena() const;
+    int obtenerTamano() const;
 };
 
 #endif

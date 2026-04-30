@@ -18,3 +18,15 @@ void Pila::mostrar() const {
         temp.pop();
     }
 }
+
+bool Pila::estaVacia() const {
+    return datos.empty();
+}
+
+bool Pila::estaLlena() const {
+    return false;
+}
+
+int Pila::obtenerTamano() const {
+    return datos.size();
+}

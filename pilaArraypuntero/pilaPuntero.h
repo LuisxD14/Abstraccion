@@ -10,6 +10,9 @@ public:
     void agregar(int valor);
     void quitar();
     void mostrar() const;
+    bool estaVacia() const;
+    bool estaLlena() const;
+    int obtenerTamano() const;
 };
 
 #endif
