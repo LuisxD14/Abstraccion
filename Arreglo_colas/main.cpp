@@ -4,22 +4,20 @@
 #include "Cola.cpp"
 using namespace std;
 
-
 void encabezado() {
     cout << "\n";
-    cout << "  SISTEMA DE COLA DE PRODUCTOS   (MAX:" << MAX << ")  \n";
+    cout << "=== Menu de Cola ===\n";
 }
 
 void menu() {
-    cout << "   1)  Encolar producto\n";
-    cout << "   2)  Desencolar producto\n";
-    cout << "   3)  Ver cola completa\n";
-    cout << "   4)  Ver producto en frente\n";
-    cout << "   5)  Verificar si esta vacia\n";
-    cout << "   6)  Verificar si esta llena\n";
-    cout << "   7)  Capacidad usada\n";
-    cout << "   0)  Salir\n";
-    cout << "  >> Opcion: ";
+    cout << "1. Agregar producto\n";
+    cout << "2. Quitar producto\n";
+    cout << "3. Mostrar cola\n";
+    cout << "4. Verificar si esta vacia\n";
+    cout << "5. Verificar si esta llena\n";
+    cout << "6. Mostrar tamano de la cola\n";
+    cout << "7. Salir\n";
+    cout << "Elige una opcion: ";
 }
 
 void pausar() {
@@ -27,7 +25,6 @@ void pausar() {
     cin.ignore();
     cin.get();
 }
-
 
 int main() {
     Cola cola;
@@ -40,9 +37,9 @@ int main() {
 
         switch (opcion) {
 
-        case 1: {   
+        case 1: {
             Producto p;
-            cout << "\n  Nuevo producto \n";
+            cout << "\n  Nuevo producto\n";
             cout << "  Nombre : "; cin.ignore(); getline(cin, p.nombre);
             cout << "  Precio : $ "; cin >> p.precio;
             cola.encolar(p);
@@ -51,49 +48,38 @@ int main() {
             break;
         }
 
-        case 2:     
+        case 2:
             cola.desencolar();
             pausar();
             break;
 
-        case 3:     
-            cout << "\n Cola actual \n";
+        case 3:
+            cout << "\n  Cola actual\n";
             cola.mostrar();
             pausar();
             break;
 
-        case 4:     
-            if (!cola.estaVacia()) {
-                Producto f = cola.frente();
-                cout << "\n  Frente -> " << f.nombre
-                     << "  |  $ " << f.precio << "\n";
-            } else {
-                cout << "\n  La cola esta vacia.\n";
-            }
-            pausar();
-            break;
-
-        case 5:     
-            cout << "\n  La cola " 
+        case 4:
+            cout << "\n  La cola "
                  << (cola.estaVacia() ? "SI esta vacia." : "NO esta vacia.")
                  << "\n";
             pausar();
             break;
 
-        case 6:     
+        case 5:
             cout << "\n  La cola "
                  << (cola.estaLlena() ? "SI esta llena." : "NO esta llena.")
                  << "\n";
             pausar();
             break;
 
-        case 7:     
+        case 6:
             cout << "\n  Elementos en cola : " << cola.tamano()
                  << " / " << MAX << "\n";
             pausar();
             break;
 
-        case 0:
+        case 7:
             cout << "\n  Hasta luego.\n\n";
             break;
 
@@ -102,7 +88,7 @@ int main() {
             pausar();
         }
 
-    } while (opcion != 0);
+    } while (opcion != 7);
 
     return 0;
 }

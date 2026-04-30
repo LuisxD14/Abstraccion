@@ -5,7 +5,6 @@
 #include <string>
 using namespace std;
 
-
 struct Producto {
     string nombre;
     float  precio;
@@ -57,7 +56,7 @@ public:
             return;
         }
         arreglo[fin] = p;
-        fin = (fin + 1) % MAX; 
+        fin = (fin + 1) % MAX;
         cantidad++;
     }
 
@@ -82,7 +81,7 @@ public:
             int idx = (inicio + i) % MAX;
             cout << "  [" << i + 1 << "]  "
                  << arreglo[idx].nombre;
-        
+
             int pad = 22 - (int)arreglo[idx].nombre.size();
             for (int s = 0; s < pad; s++) cout << ' ';
             cout << "$ " << arreglo[idx].precio << "\n";
