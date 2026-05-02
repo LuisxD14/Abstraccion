@@ -7,8 +7,6 @@ using namespace std;
 
 const int MAX = 5;
 
-// ─── Tipos de dato ────────────────────────────────────────
-
 struct Producto {
     string nombre;
     float  precio;
@@ -19,7 +17,6 @@ struct Orden {
     string descripcion;
 };
 
-// ─── Clase abstracta ─────────────────────────────────────
 
 class ColaAbstracta {
 public:
@@ -94,7 +91,6 @@ public:
     }
 };
 
-// ─── Cola de Ordenes (nueva clase, OCP) ───────────────────
 
 class ColaOrdenAbstracta {
 public:
