@@ -19,14 +19,13 @@ void manejarProductos() {
 
     do {
         encabezado("PRODUCTOS");
-        cout << "   1)  Encolar producto\n";
-        cout << "   2)  Desencolar producto\n";
+        cout << "   1)  Agregar producto\n";
+        cout << "   2)  Quitar producto\n";
         cout << "   3)  Ver cola\n";
-        cout << "   4)  Ver frente\n";
-        cout << "   5)  Esta vacia?\n";
-        cout << "   6)  Esta llena?\n";
-        cout << "   7)  Tamano\n";
-        cout << "   0)  Volver\n\n";
+        cout << "   4)  Esta vacia?\n";
+        cout << "   5)  Esta llena?\n";
+        cout << "   6)  Tamano\n";
+        cout << "   7)  Volver\n\n";
         cout << "   Opcion: ";
         cin >> op;
 
@@ -55,32 +54,23 @@ void manejarProductos() {
             pausar();
             break;
         case 4:
-            if (!cola.estaVacia()) {
-                Producto f = cola.frente();
-                cout << "\n   Frente: " << f.nombre << "   $" << f.precio << "\n";
-            } else {
-                cout << "\n   La cola esta vacia.\n";
-            }
-            pausar();
-            break;
-        case 5:
             cout << "\n   " << (cola.estaVacia() ? "Si esta vacia." : "No esta vacia.") << "\n";
             pausar();
             break;
-        case 6:
+        case 5:
             cout << "\n   " << (cola.estaLlena() ? "Si esta llena." : "No esta llena.") << "\n";
             pausar();
             break;
-        case 7:
+        case 6:
             cout << "\n   Elementos: " << cola.tamano() << " / " << MAX << "\n";
             pausar();
             break;
-        case 0: break;
+        case 7: break;
         default:
             cout << "\n   Opcion invalida.\n";
             pausar();
         }
-    } while (op != 0);
+    } while (op != 7);
 }
 
 void manejarOrdenes() {
@@ -89,14 +79,13 @@ void manejarOrdenes() {
 
     do {
         encabezado("ORDENES");
-        cout << "   1)  Encolar orden\n";
-        cout << "   2)  Desencolar orden\n";
+        cout << "   1)  Agregar orden\n";
+        cout << "   2)  Quitar orden\n";
         cout << "   3)  Ver cola\n";
-        cout << "   4)  Ver frente\n";
-        cout << "   5)  Esta vacia?\n";
-        cout << "   6)  Esta llena?\n";
-        cout << "   7)  Tamano\n";
-        cout << "   0)  Volver\n\n";
+        cout << "   4)  Esta vacia?\n";
+        cout << "   5)  Esta llena?\n";
+        cout << "   6)  Tamano\n";
+        cout << "   7)  Volver\n\n";
         cout << "   Opcion: ";
         cin >> op;
 
@@ -125,32 +114,23 @@ void manejarOrdenes() {
             pausar();
             break;
         case 4:
-            if (!cola.estaVacia()) {
-                Orden f = cola.frente();
-                cout << "\n   Frente: Orden #" << f.id << "   " << f.descripcion << "\n";
-            } else {
-                cout << "\n   La cola esta vacia.\n";
-            }
-            pausar();
-            break;
-        case 5:
             cout << "\n   " << (cola.estaVacia() ? "Si esta vacia." : "No esta vacia.") << "\n";
             pausar();
             break;
-        case 6:
+        case 5:
             cout << "\n   " << (cola.estaLlena() ? "Si esta llena." : "No esta llena.") << "\n";
             pausar();
             break;
-        case 7:
+        case 6:
             cout << "\n   Elementos: " << cola.tamano() << " / " << MAX << "\n";
             pausar();
             break;
-        case 0: break;
+        case 7: break;
         default:
             cout << "\n   Opcion invalida.\n";
             pausar();
         }
-    } while (op != 0);
+    } while (op != 7);
 }
 
 int main() {
