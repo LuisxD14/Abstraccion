@@ -19,14 +19,13 @@ int main() {
 
     do {
         encabezado();
-        cout << "   1)  Encolar producto\n";
-        cout << "   2)  Desencolar producto\n";
+        cout << "   1)  Agregar producto\n";
+        cout << "   2)  Quitar producto\n";
         cout << "   3)  Ver cola\n";
-        cout << "   4)  Ver frente\n";
-        cout << "   5)  Esta vacia?\n";
-        cout << "   6)  Esta llena?\n";
-        cout << "   7)  Tamano\n";
-        cout << "   0)  Salir\n\n";
+        cout << "   4)  Esta vacia?\n";
+        cout << "   5)  Esta llena?\n";
+        cout << "   6)  Tamano\n";
+        cout << "   7)  Salir\n\n";
         cout << "   Opcion: ";
         cin >> op;
 
@@ -55,34 +54,25 @@ int main() {
             pausar();
             break;
         case 4:
-            if (!cola.estaVacia()) {
-                Producto f = cola.frente();
-                cout << "\n   Frente: " << f.nombre << "   $" << f.precio << "\n";
-            } else {
-                cout << "\n   La cola esta vacia.\n";
-            }
-            pausar();
-            break;
-        case 5:
             cout << "\n   " << (cola.estaVacia() ? "Si esta vacia." : "No esta vacia.") << "\n";
             pausar();
             break;
-        case 6:
+        case 5:
             cout << "\n   " << (cola.estaLlena() ? "Si esta llena." : "No esta llena.") << "\n";
             pausar();
             break;
-        case 7:
+        case 6:
             cout << "\n   Elementos: " << cola.tamano() << " / " << MAX << "\n";
             pausar();
             break;
-        case 0:
+        case 7:
             cout << "\n   Hasta luego.\n\n";
             break;
         default:
             cout << "\n   Opcion invalida.\n";
             pausar();
         }
-    } while (op != 0);
+    } while (op != 7);
 
     return 0;
 }
