@@ -55,10 +55,9 @@ public:
     int tamano() const override {
         return cantidad;
     }
-
-    Producto frente() const override {
-        return arreglo[inicio];
-    }
+    Producto frente() const {
+    return arreglo[inicio];
+}
 
     void encolar(Producto p) override {
         if (estaLlena()) {
