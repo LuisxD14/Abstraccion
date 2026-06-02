@@ -670,8 +670,6 @@ string reporteCalculadoraCSV(
     return ss.str();
 }
 
-/
-// CALCULADORA XML
 
 string reporteCalculadoraXML(
     string operacion,
