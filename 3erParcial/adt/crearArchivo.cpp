@@ -9,7 +9,7 @@ void menuPila(Pila& pila) {
     int opcion, valor;
 
     do {
-        cout << "\n===== MENU PILA =====\n";
+        cout << "\n--- MENU PILA ---\n";
         cout << "1. Agregar elemento\n";
         cout << "2. Quitar elemento\n";
         cout << "3. Mostrar pila\n";
@@ -60,7 +60,7 @@ void menuCola(Cola& cola) {
     int opcion;
 
     do {
-        cout << "\n=== Menu de Cola ===\n";
+        cout << "\n--- Menu de Cola ---\n";
         cout << "1. Agregar producto\n";
         cout << "2. Quitar producto\n";
         cout << "3. Mostrar cola\n";
@@ -126,7 +126,7 @@ void menuLista(Lista& lista) {
     int opcion, valor;
 
     do {
-        cout << "\n=== Menú de Lista ===\n";
+        cout << "\n--- Menú de Lista ---\n";
         cout << "1. Agregar elemento\n";
         cout << "2. Quitar elemento\n";
         cout << "3. Mostrar lista\n";
@@ -203,7 +203,7 @@ void menuConversion(const string& nombreEstructura, const vector<string>& datos)
                 cout << "\nConversion cancelada.\n";
                 break;
             default:
-                cout << "\n[!] Opcion invalida.\n";
+                cout << "\nOpcion invalida.\n";
         }
     } while (formatoOpc < 1 || formatoOpc > 5);
 }
@@ -212,14 +212,11 @@ int main(){
     int opc;
 
     do{
-        cout << "\n========================================\n";
-        cout << "    MENU PRINCIPAL - ADT CONVERTER\n";
-        cout << "========================================\n";
+        cout << " MENU PRINCIPAL\n";
         cout << "1. Crear Pila\n";
         cout << "2. Crear Cola\n";
         cout << "3. Crear Lista\n";
         cout << "Cualquier otro numero para salir.\n";
-        cout << "========================================\n";
         cout << "Selecciona una opcion: ";
         cin >> opc;
 
@@ -256,6 +253,6 @@ int main(){
 
     } while (opc >= 1 && opc <= 3);
 
-    cout << "\n[*] Programa finalizado.\n";
+    cout << "\nPrograma finalizado.\n";
     return 0;
 }
