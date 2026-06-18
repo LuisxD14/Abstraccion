@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//================================================
+// CLASE PERSONA
+//================================================
 
 class Persona {
 
@@ -78,6 +81,9 @@ public:
     }
 };
 
+//================================================
+// CLASE AUTO
+//================================================
 
 class Auto {
 
@@ -134,12 +140,18 @@ public:
     }
 };
 
+//================================================
+// HOLA MUNDO
+//================================================
 
 string holaMundo() {
 
     return "Hola Mundo";
 }
 
+//================================================
+// FACTORIAL RECURSIVO
+//================================================
 
 long factorial(int n) {
 
@@ -148,6 +160,10 @@ long factorial(int n) {
 
     return n * factorial(n - 1);
 }
+
+//================================================
+// REGISTRO DINAMICO
+//================================================
 
 void capturarPersonasAutos(
     Persona *&personas,
@@ -185,7 +201,9 @@ void capturarPersonasAutos(
     }
 }
 
-
+//================================================
+// CLASE CALCULADORA
+//================================================
 
 class Calculadora {
 
@@ -242,6 +260,9 @@ public:
         return a + b + c;
     }
 
+    //=========================
+    // RESTA
+    //=========================
 
     int resta() {
 
@@ -258,6 +279,9 @@ public:
         return a - b - c;
     }
 
+    //=========================
+    // MULTIPLICACION
+    //=========================
 
     int multiplicacion() {
 
@@ -299,6 +323,9 @@ public:
         return divRec(divRec(a, b), c);
     }
 
+    //=========================
+    // POTENCIA
+    //=========================
 
     int potencia() {
 
@@ -316,6 +343,9 @@ public:
     }
 };
 
+//================================================
+// REPORTE HOLA MUNDO
+//================================================
 
 string reporteHolaMundoTXT() {
 
@@ -355,6 +385,9 @@ string reporteHolaMundoJSON() {
     return ss.str();
 }
 
+//================================================
+// REPORTE FACTORIAL
+//================================================
 
 string reporteFactorialTXT(int n) {
 
@@ -409,6 +442,9 @@ string reporteFactorialJSON(int n) {
 
     return ss.str();
 }
+//================================================
+// PERSONAS Y AUTOS TXT
+//================================================
 
 string reportePersonasAutosTXT(
     Persona personas[],
@@ -437,7 +473,9 @@ string reportePersonasAutosTXT(
 
     return ss.str();
 }
-
+//================================================
+// PERSONAS Y AUTOS CSV
+//================================================
 
 string reportePersonasAutosCSV(
     Persona personas[],
@@ -474,7 +512,9 @@ string reportePersonasAutosCSV(
 
     return ss.str();
 }
-
+//================================================
+// PERSONAS Y AUTOS XML
+//================================================
 
 string reportePersonasAutosXML(
     Persona personas[],
@@ -547,7 +587,9 @@ string reportePersonasAutosXML(
 
     return ss.str();
 }
-
+//================================================
+// PERSONAS Y AUTOS JSON
+//================================================
 
 string reportePersonasAutosJSON(
     Persona personas[],
@@ -670,6 +712,9 @@ string reporteCalculadoraCSV(
     return ss.str();
 }
 
+//================================================
+// CALCULADORA XML
+//================================================
 
 string reporteCalculadoraXML(
     string operacion,
@@ -695,7 +740,9 @@ string reporteCalculadoraXML(
     return ss.str();
 }
 
-
+//================================================
+// CALCULADORA JSON
+//================================================
 
 string reporteCalculadoraJSON(
     string operacion,
